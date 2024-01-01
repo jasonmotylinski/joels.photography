@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Joel's Photography</title>
+        <script src="static/js/ken-burns-carousel.js" type="module"></script>
+        <style>
+            ken-burns-carousel {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <ken-burns-carousel 
+            images="{% for img in images %}static/images/{{ img }} {% endfor %}"
+            fade-duration="1000"
+            slide-duration="25000">
+        </ken-burns-carousel>
+    </body>
+</html>
